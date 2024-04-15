@@ -12,12 +12,48 @@
   <link rel="stylesheet" href="style.css">
 
   <title>AmoTrans</title>
+
+  <style>
+    .interactive-card {
+      transition: transform 0.3s ease;
+    }
+
+    .interactive-card:hover {
+      transform: scale(1.05);
+    }
+
+    /* Personalize as setas do carrossel */
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 50px;
+      /* Tamanho das setas */
+      height: 50px;
+      background-color: rgba(255, 0, 127, 0.5);
+      /* Cor de fundo rosa com opacidade */
+      border-radius: 50%;
+      /* Formato de círculo */
+    }
+
+    /* Estilo dos ícones das setas */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M3.854 0l-.354.354-3.5 3.5.707.707 3.146-3.146v7.586h1v-7.586l3.146 3.146.707-.707-3.5-3.5-.354-.354h-7.586v-1h7.586z'/%3E%3C/svg%3E");
+      background-size: 100%;
+      /* Tamanho total do ícone */
+    }
+
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M4.854 0l-.354.354-3.5 3.5.707.707 3.146-3.146v7.586h1v-7.586l3.146 3.146.707-.707-3.5-3.5-.354-.354h-7.586v-1h7.586z' transform='rotate(180 4 4)'/%3E%3C/svg%3E");
+      background-size: 100%;
+      /* Tamanho total do ícone */
+    }
+  </style>
 </head>
 
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #64269B;">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #F7A9B8;">
       <a class="navbar-brand" href="index.html">
         <img src="/assets/LOGO NOVA.png" height="70px" width="100px" alt="Logo Nova">
       </a>
@@ -31,9 +67,12 @@
             <a class="nav-link" href="team.html">Nossa equipe</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Onde nos achar!</a>
+            <a class="nav-link" href="local.html">Onde nos achar</a>
           </li>
-
+          <!-- Novo item de menu para "Nossos cursos" -->
+          <li class="nav-item">
+            <a class="nav-link" href="#cursos">Nossos cursos</a>
+          </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
         </form>
@@ -49,18 +88,24 @@
           <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Quem somos?</h1>
           <p class="lead">Somos uma organização não-governamental sem fins lucrativos, que defendemos os Direitos
             Humanos de
-            pessoas travestis e transexuais, levando em consideração a vulnerabilidade e contexto sociopolítico
+            pessoas travestis e transexuais, levando em consideração a vulnerabilidade e contexto sociopolític
             dessa população, agindo, sobretudo, através de projetos e atividades no Estado de Pernambuco.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
             <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
-              style="background-color: #64269B;">Realizar denuncia anônima</button>
-
+              style="background-color: #F7A9B8;">Realizar denuncia anônima</button>
           </div>
+          <a href="https://api.whatsapp.com/send?phone=558199207725&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20atendente."
+            target="_blank">
+            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold"
+              style="background-color: #F7A9B8;">
+              Falar diretamente com um atendente
+            </button>
+          </a>
         </div>
         <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-          <img class="rounded-lg-3" src="/assets/undraw_detailed_examination_re_ieui.svg" alt="" width="450"
-            height="400px">
+          <img class="rounded-lg-3" src="/assets/4.svg" alt="" width="450" height="400px">
         </div>
+
       </div>
     </div>
 
@@ -69,9 +114,11 @@
       <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path
           d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-          class="shape-fill"></path>
+          class="shape-fill" style="fill: #F7A9B8;"></path>
       </svg>
     </div>
+
+
 
     <!-- Script para inicializar o mapa -->
     <script>
@@ -133,34 +180,146 @@
 
 
 
+
+
       <hr class="featurette-divider">
-      
+
   </main>
   <div class="b-example-divider"></div>
 
-      <div class="" style="background-color: #64269B; width: 100vw;">
-        <div class=" cursos row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-          <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-            <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Conheça nossos cursos disponíveis</h1>
-            <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
-              popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
-              extensive prebuilt components, and powerful JavaScript plugins.</p>
-            
+  <div id="cursos" style="background-color: #F7A9B8; width: 100vw;">
+    <div class=" cursos row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+      <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Conheça o nosso Centro de Convivência e Qualificação para
+          Travestis, Transexuais, Lésbicas e Mulheres Bissexuais</h1>
+
+
+        <p class="lead">Historicamente a AMOTRANS vem construindo uma relação de conquista de espaço para pessoas trans
+          e travestis, através de projetos sociais, como cursos de qualificação, que visam dar oportunidade para essas
+          pessoas, pensando que uma das maiores problemáticas enfrentadas por nós, seja a inserção da população T no
+          mercado de trabalho, além de desenvolvermos núcleos de acolhimento e discussão de pautas relevantes para a
+          comunidade.
+          Pensando nisso, desenvolvemos um centro de convivência e qualificação, que além de assistir as população T,
+          também acolhe as mulheres lésbicas e bissexuais, já que também é outro grupo minoritário e com uma forte
+          relação com a nossas pautas.</p>
+
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/beleza.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/nigodin.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/3.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/4.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/5.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/6.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <!-- Add more carousel items as needed -->
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/7.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/8.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/9.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more carousel items as needed -->
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/10.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/11.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card interactive-card w-100 h-100">
+                      <img src="assets/12.jpeg" class="card-img-top" alt="...">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-            <img class="rounded-lg-3" src="/assets/cursos.jpeg" alt="" width="520">
-          </div>
+          <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
+
+
       </div>
+      <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+        <img class="rounded-lg-3" src="/assets/cursos.jpeg" alt="" width="520">
+      </div>
+    </div>
+  </div>
+  <div class="b-example-divider"></div>
 
-      <div class="b-example-divider"></div>
-       <!-- FOOTER -->
-       <footer class="container">
-        <p class="float-right"><a href="">AAAAAAA</a></p>
-        <p>&copy; Companhia S.A., 2017-2018 &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
-      </footer>
-
-
+  <footer class="container">
+    <p class="float-right"><a href="">AAAAAAA</a></p>
+    <p>&copy; Companhia S.A., 2017-2018 &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

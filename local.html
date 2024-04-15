@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmoTrans</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #map {
+            height: 100vh; /* Definindo altura como 100% da viewport */
+        }
+
+        #street-view {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #F7A9B8;">
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/LOGO NOVA.png" height="70px" width="100px" alt="Logo Nova">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="team.html">Nossa equipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="local.html">Onde nos achar</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div id="map"></div>
+    <div id="street-view"></div>
+
+    <button onclick="showStreetView()">Ver Street View</button>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts.js"></script>
+
+    <script>
+        var map = L.map('map').setView([-8.0628, -34.878], 15); // Coordenadas para o endereço fornecido e o zoom inicial
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-8.0628, -34.878]).addTo(map)
+            .bindPopup('<b>R. José de Alencar, Boa Vista, Recife - PE, 50070-030</b><br><b>Telefone:</b> (81) 98774-1838<br><b>Horário de funcionamento:</b> Abre seg-sex. às 10:00<br><a tagert="blank" href="https://www.google.com/maps/uv?pb=!1s0x7ab193a49e381d3%3A0x917dde80484b4a41!3m1!7e115!4s%2Fmaps%2Fplace%2Famo%2Btrans%2F%40-8.0592432%2C-34.8876779%2C3a%2C75y%2C330.12h%2C90t%2Fdata%3D*213m4*211e1*213m2*211sWgbk3WOv8eN_-Vblc_BzZA*212e0*214m2*213m1*211s0x7ab193a49e381d3%3A0x917dde80484b4a41%3Fsa%3DX%26ved%3D2ahUKEwiDrZjgsZ-FAxU5pJUCHWjrAcwQpx96BAgPEAA!5samo%20trans%20-%20Pesquisa%20Google!15sCgIgAQ&imagekey=!1e2!2sWgbk3WOv8eN_-Vblc_BzZA&hl=pt-BR&ved=1t%3A206134&ictx=111">Ver no Google Maps</a>')
+            .openPopup();
+
+        function showStreetView() {
+            var panorama = L.streetview('street-view')
+                .setLatLng([-8.0628, -34.878])
+                .addTo(map);
+        }
+    </script>
+
+</body>
+
+</html>
