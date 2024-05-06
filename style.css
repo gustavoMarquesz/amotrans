@@ -2,136 +2,16 @@ body {
   overflow-x: hidden;
 }
 
-.carousel-item {
-  height: 60vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-inner {
-  text-align: center;
-}
-
-.carousel-caption {
-  padding: 15px; /* Espaçamento interno */
-  border-radius: 10px; /* Borda arredondada */
-  background-color: rgba(57, 13, 109, 0.5); /* Cor de fundo com 50% de transparência */
-  position: absolute; /* Posição absoluta para centralizar */
-  top: 50%; /* Alinha o topo no centro verticalmente */
-  left: 50%; /* Alinha a esquerda no centro horizontalmente */
-  transform: translate(-50%, -50%); /* Centraliza completamente */
-}
-
-
-.card {
-  width: 17em;
-  height: 22.5em;
-  background: #171717;
-  transition: 1s ease-in-out;
-  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card span {
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  display: block;
-  font-size: 1em;
-}
-
-.card .info {
-  font-weight: 400;
-  color: white;
-  display: block;
-  text-align: center;
-  font-size: 0.72em;
-  margin: 1em;
-}
-
-.card .img {
-  width: 4.8em;
-  height: 4.8em;
-  background: white;
-  border-radius: 15px;
-  margin: auto;
-}
-
-.card .share {
-  margin-top: 1em;
+.home{
+  margin-top: 230px;
+  margin-bottom: 100px;
   display: flex;
   justify-content: center;
-  gap: 1em;
-}
-
-.card a {
-  color: white;
-  transition: .4s ease-in-out;
-}
-
-.card a:hover {
-  color: red;
-}
-
-.card button {
-  padding: 0.8em 1.7em;
-  display: block;
-  margin: auto;
-  border-radius: 25px;
-  border: none;
-  font-weight: bold;
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  transition: .4s ease-in-out;
-}
-
-.card button:hover {
-  background: red;
-  color: white;
-  cursor: pointer;
-}
-
-.div-cards{
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 30px;
+
 }
 
-
-.custom-shape-divider-bottom-1710308473 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1710308473 svg {
-  position: relative;
-  display: block;
-  width: calc(131% + 1.3px);
-  height: 164px;
-}
-
-.custom-shape-divider-bottom-1710308473 .shape-fill {
-  fill: #64269B;
-}
 
 .inicio{
   display: flex;
@@ -140,4 +20,81 @@ body {
 .cursos{
   color: white;
 }
+
+
+.sociais{
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sociais p{
+  align-items: center;
+  width: 350px;
+  padding: 5%;
+}
+
+.sociais img{
+  height: 200px;
+  width: 230px;
+}
+
+
+footer{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  gap: 150px;
+}
+
+.report{
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+}
+
+.home-report{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
+  gap: 100px;
+  height: 100vh;
+}
+
+.btn-custom {
+  background-color: rgb(167, 222, 230);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.btn-custom:hover {
+  background-color: pink;
+}
+
+.posts{
+  margin-top: 700px;
+}
+
+.posts p{
+  text-align: start;
+}
+
+a{
+  color: black;
+}
+
+
 
