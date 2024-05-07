@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <style>
         #map {
-            height: 100vh; /* Definindo altura como 100% da viewport */
+            height: 100vh;
+            /* Definindo altura como 100% da viewport */
         }
 
         #street-view {
@@ -24,29 +25,50 @@
 
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #F7A9B8;">
-            <a class="navbar-brand" href="index.html">
-                <img src="/assets/LOGO NOVA.png" height="70px" width="100px" alt="Logo Nova">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="team.html">Nossa equipe</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="local.html">Onde nos achar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="report.html">Denuncie</a>
-                    </li>
-                </ul>
-                <form class="form-inline mt-2 mt-md-0">
-                </form>
+            <div class="container justify-content-center">
+                <a class="navbar-brand mx-auto" href="index.html">
+                    <img src="/assets/LOGO NOVA.png" height="100px" width="200px" alt="Logo Nova">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a style="color: black;" class="nav-link" href="team.html">° Nossa equipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="color: black;" class="nav-link" href="local.html">° Onde nos achar</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a style="color: black;" class="nav-link" href="#cursos">° Nossos cursos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a style="color: black;" class="nav-link" href="report.html">° Denuncie</a>
+                        </li>
+                        <li class="nav-item" style="border-right: 1px solid;">
+                            <a style="color: black;" class="nav-link" href="#cursos"></a>
+                        </li>
+                        <li style="display: flex; flex-direction: column; margin-left: 20px;">
+                            <a href="quemsomos.html">Quem somos</a>
+                            <a href="https://api.whatsapp.com/send?phone=5581987741838" target="_blank">Fale conosco</a>
+                        </li>
+                    </ul>
+
+
+                    <form class="form-inline mt-2 mt-md-0">
+                    </form>
+                </div>
+
             </div>
         </nav>
+        <li>
+            <a>Quem somos</a>
+            <a>Fale conosco</a>
+        </li>
     </header>
 
     <div id="map"></div>
